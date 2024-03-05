@@ -1,0 +1,25 @@
+databaseChangeLog:
+  -  changeSet:
+       id:  Create orders table
+       author:  Javidan Hajiyev
+       changes:
+         -  createTable:
+              tableName:  orders
+              columns:
+                -  column:
+                     name:  id
+                     type:  int
+                     autoIncrement:  true
+                     constraints:
+                       primaryKey:  true
+                       nullable:  false
+                -  column:
+                     name:  customer_name
+                     type:  varchar(100)
+                -  column:
+                     name:  total_amount
+                     type:  numeric(16,2)
+                     constraints:
+                       nullable:  false
+
+              remarks: Table to store orders information
