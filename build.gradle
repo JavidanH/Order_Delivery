@@ -22,25 +22,17 @@ repositories {
 }
 
 dependencies {
-    // Spring Boot Starter for building web applications
-    implementation 'org.springframework.boot:spring-boot-starter-web'
 
-    // Lombok for reducing boilerplate code (compileOnly and annotationProcessor)
+    implementation 'org.springframework.boot:spring-boot-starter-web'
     compileOnly 'org.projectlombok:lombok'
     annotationProcessor 'org.projectlombok:lombok'
 
-    // Spring Boot Starter for testing
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-
-    // Spring Boot Starter for Data JPA (Java Persistence API)
     implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
-
-    // Liquibase for database schema version control
     implementation 'org.liquibase:liquibase-core'
-
-    // PostgreSQL JDBC driver for runtime
     runtimeOnly 'org.postgresql:postgresql'
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    implementation 'org.springframework.cloud:spring-cloud-starter-openfeign:3.1.4'
 }
 
 tasks.named('test') {

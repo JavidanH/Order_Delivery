@@ -12,5 +12,6 @@ import java.math.BigDecimal;
 public class CreateOrderRequest {
     private String customerName;
     private BigDecimal totalAmount;
+    private  Long paymentId;
 
 }

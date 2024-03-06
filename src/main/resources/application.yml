@@ -5,6 +5,23 @@ spring:
     url: jdbc:postgresql://localhost:5432/ingress
     username: mytest
     password: 123456
-
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 4
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: true
   liquibase:
-    change-log: classpath:liquibase/changelog-master.yml  # Check the path and ensure it's correct
+    change-log: classpath:liquibase/changelog-master.yml
+
+server:
+  port: 8888
+
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 5000
+        readTimeout: 5000
+      ms-payment:
+      url: http://localhost:8080

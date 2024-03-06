@@ -8,9 +8,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("v1/order")
+@RequestMapping("internal/v1/order")
 @RequiredArgsConstructor
-public class  OrderController {
+public class InternalOrderController {
 
     private final OrderService orderService;
 
